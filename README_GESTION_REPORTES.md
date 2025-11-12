@@ -65,12 +65,11 @@
 
 | Acción del Actor | Respuesta del Sistema |
 |------------------|----------------------|
-| 1. El caso de uso inicia cuando el actor accede al módulo Reportes y selecciona "Reporte de Clientes" | 2. El sistema muestra la pantalla con filtros: tipo de cliente (Persona/Empresa), estado (Activo/Inactivo), rango de fechas de registro y formato de exportación |
-| 3. El actor aplica filtros según sus necesidades (tipo, estado, fechas) | 4. El sistema valida los criterios ingresados y habilita el botón "Generar Reporte" |
-| 5. El actor presiona "Generar Reporte" | 6. El sistema consulta la base de datos y muestra tabla con: Código, Nombre/Razón Social, Documento, Tipo, Teléfono, Email, Estado y Saldo Pendiente |
-| 7. El actor revisa el listado de clientes mostrado | 8. El sistema presenta totales: cantidad por tipo de cliente, clientes activos/inactivos y saldo total pendiente de cobro |
-| 9. El actor selecciona un cliente específico para ver detalles | 10. El sistema muestra información completa: datos de contacto, historial de compras, estado de cuenta detallado y última transacción |
-| 11. El actor elige el formato de exportación (PDF/Excel) | 12. El sistema genera el archivo con el reporte completo y lo pone disponible para descarga, dando fin al Caso de Uso |
+| 1. El caso de uso inicia cuando el actor accede al módulo Reportes y selecciona "Reporte de Clientes" | 2. El sistema muestra la pantalla con filtros: tipo de cliente (Minorista/Mayorista/Industrial/Institucional), estado (Activo/Inactivo), rango de fechas de registro , y Nombre o DNI/RUC |
+| 3. El actor puede aplicar filtros según sus necesidades (tipo, estado, fechas,Nombre o DNI/RUC) | 4. El actor presiona el boton "Aplicar filtros" |
+| 5. El sistema consulta la base de datos y muestra tabla con: Código, Nombre/Razón Social, Documento, Tipo, Estado" | 6.   |
+| 7. El actor revisa el listado de clientes mostrado | 8. El sistema presenta totales: Código, Nombre/Razón Social, Documento, Tipo, Estado|
+| 9.  El actor elige el formato de exportación (PDF/Excel) | 10. El sistema genera el archivo con el reporte completo y lo pone disponible para descarga |
 
 ### CURSOS ALTERNATIVOS
 
@@ -211,5 +210,6 @@ Los siguientes archivos HTML implementan la funcionalidad de reportes:
 - `reporte-inventario.html` - Interfaz para generar reporte de inventario
 - `reporte-produccion.html` - Interfaz para generar reporte de órdenes de producción
 - `reporte-estado-cuentas.html` - Interfaz para generar estado de cuenta de clientes
+
 
 El archivo `app-rep.js` contiene la lógica JavaScript para manejar la interacción de los reportes, validaciones de formularios y comunicación con el backend para la generación y descarga de los archivos de reporte.
